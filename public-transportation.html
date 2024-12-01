@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Transportation</title>
+    <script>
+        // Toggle visibility of the schedule
+        function toggleSchedule(id) {
+            var element = document.getElementById(id);
+            element.style.display = (element.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</head>
+<body style="background-color: #202020; color: white; font-family: Arial, sans-serif; margin: 0; padding: 0;">
+
+    <!-- Header -->
+    <header style="background-color: #444; padding: 20px; text-align: center;">
+        <h1>Public Transportation</h1>
+        <p>Explore routes, schedules, and public transportation services.</p>
+        <a href="index.html" style="color: lightblue; text-decoration: none;">Back to Main Website</a>
+    </header>
+
+    <!-- Interactive Content -->
+    <div style="padding: 20px;">
+        <!-- Route Description -->
+        <h2 style="text-align: center;">Available Routes</h2>
+        <p style="text-align: center;">Click to view the schedule and stops for each route.</p>
+
+        <div style="margin: 20px auto; max-width: 800px; text-align: center;">
+            <button onclick="toggleSchedule('route1')" 
+                style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; margin-bottom: 10px; border-radius: 4px;">
+                Route 1: Downtown to Uptown
+            </button>
+            <div id="route1" style="display: none; background-color: #333; padding: 10px; border-radius: 4px; margin-bottom: 20px;">
+                <p>Stops: Central Park → 5th Avenue → Uptown Plaza</p>
+                <p>Schedule: Every 15 minutes from 6 AM to 10 PM</p>
+            </div>
+
+            <button onclick="toggleSchedule('route2')" 
+                style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; margin-bottom: 10px; border-radius: 4px;">
+                Route 2: City Hall to Suburbs
+            </button>
+            <div id="route2" style="display: none; background-color: #333; padding: 10px; border-radius: 4px; margin-bottom: 20px;">
+                <p>Stops: City Hall → Green Valley → Suburb Station</p>
+                <p>Schedule: Every 20 minutes from 7 AM to 9 PM</p>
+            </div>
+
+            <button onclick="toggleSchedule('route3')" 
+                style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; margin-bottom: 10px; border-radius: 4px;">
+                Route 3: Airport to Downtown
+            </button>
+            <div id="route3" style="display: none; background-color: #333; padding: 10px; border-radius: 4px; margin-bottom: 20px;">
+                <p>Stops: Airport → Business District → Downtown Terminal</p>
+                <p>Schedule: Every 30 minutes from 5 AM to 12 AM</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Maps Embed -->
+    <div style="padding: 20px; text-align: center; background-color: #333; margin-top: 20px;">
+        <h2>Interactive Route Map</h2>
+        <p>Find the nearest bus stop or visualize routes on the map below:</p>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509345!2d-122.42067908468157!3d37.7749291797597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064c2f5a9e3%3A0x4a6bcb7a0f5b0b8b!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sph!4v1690000000000!5m2!1sen!2sph" 
+            width="80%" 
+            height="400" 
+            style="border:0; border-radius: 8px;" 
+            allowfullscreen="" 
+            loading="lazy"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: #444; color: white; text-align: center; padding: 10px;">
+        <p>© 2024 Steven Government Website</p>
+    </footer>
+</body>
+</html>

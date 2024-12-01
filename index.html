@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Government Website</title>
+
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #202020;
+            color: white;
+            overflow-x: hidden;
+        }
+
+       
+        .navbar {
+            background-color: #333333;
+            overflow: hidden;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background-color: #4CAF50;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .header {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(to bottom, rgba(0, 51, 102, 0.8), rgba(0, 102, 204, 0.8)),
+                        url('https://via.placeholder.com/1920x1080');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 120px 20px;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .header h1 {
+            font-size: 4em;
+            margin: 0;
+            font-weight: bold;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        .header p {
+            font-size: 1.5em;
+            margin-top: 20px;
+            animation: slideIn 2s ease-out;
+        }
+
+      
+        .services {
+            padding: 50px 20px;
+            background: #333333;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: #4CAF50;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        .service-card {
+            background-color: #444;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            text-align: center;
+            width: 30%;
+            display: inline-block;
+            transition: 0.3s;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card:hover {
+            background-color: #4CAF50;
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-card h3 {
+            font-size: 1.5em;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .service-card p {
+            font-size: 1em;
+            margin-top: 10px;
+            color: lightgray;
+        }
+
+        .service-card a {
+            color: lightblue;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .service-card a:hover {
+            color: #fff;
+        }
+
+        
+        .faq-section {
+            padding: 50px 20px;
+            background-color: #444;
+        }
+
+        .faq-section h2 {
+            text-align: center;
+            color: #4CAF50;
+            margin-bottom: 30px;
+        }
+
+        .faq-item {
+            background-color: #333;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .faq-item p {
+            margin: 0;
+            font-size: 1.1em;
+        }
+
+       
+        .contact-section {
+            padding: 50px 20px;
+            background-color: #333;
+        }
+
+        .contact-section h2 {
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #444;
+        }
+
+        .contact-form button {
+            padding: 14px 24px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .contact-form button:hover {
+            background-color: #388E3C;
+            transform: scale(1.1);
+        }
+
+        
+        .footer-container {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .footer-container p {
+            margin: 0;
+        }
+
+.logo-container {
+            position: relative;
+            margin: 50px auto;
+            display: block;
+            width: 150px; /* You can change the size */
+            height: 150px; /* You can change the size */
+            animation: spin 5s linear infinite;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+       
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+       
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    
+   <div class="navbar">
+    <a href="#" class="logo">
+        <img src="Logo.jpg" style="height: 50px; margin-right: 20px;">
+    </a>
+    <a href="#">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+    
+    <div class="header">
+        <h1>Welcome to Steven Government Website</h1>
+        <p>Providing essential services and information for citizens</p>
+        <a href="#" class="btn">Explore Now</a>
+    </div>
+
+     <div class="logo-container">
+        <img src="Logo.jpg">
+    </div>
+
+
+    <div class="services">
+        <h2>Our Services</h2>
+        <div class="service-card">
+            <h3><a href="public_transportation.html">Public Transportation</a></h3>
+            <p>Local governments fund, plan, construct, and maintain transportation infrastructure.</p>
+            <a href="public-transportation.html">Read More</a>
+        </div>
+        <div class="service-card">
+            <h3><a href="education.html">Education Services</a></h3>
+            <p>Local governments provide school programs to meet the needs of students.</p>
+            <a href="education-services.html">Read More</a>
+        </div>
+        <div class="service-card">
+            <h3><a href="healthcare.html">Healthcare Facilities</a></h3>
+            <p>Barangay Health Centers provide accessible and quality healthcare services.</p>
+            <a href="healthcare-facilities.html">Read More</a>
+        </div>
+    </div>
+
+   
+    <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item" onclick="toggleDescription('faq1')">
+            <p><strong>What is the public transportation system?</strong></p>
+            <p id="faq1" style="display: none;">The public transportation system includes buses, jeepneys, and tricycles operated by local authorities.</p>
+        </div>
+        <div class="faq-item" onclick="toggleDescription('faq2')">
+            <p><strong>How can I access healthcare services?</strong></p>
+            <p id="faq2" style="display: none;">You can visit your local barangay health center or hospital for medical assistance.</p>
+        </div>
+        <div class="faq-item" onclick="toggleDescription('faq3')">
+            <p><strong>How do I apply for government education services?</strong></p>
+            <p id="faq3" style="display: none;">You can apply through your local public school or online portals for scholarship programs.</p>
+        </div>
+    </div>
+
+    
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form action="#">
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <div class="footer-container">
+        <p>&copy; 2024 Steven Government Website. All Rights Reserved.</p>
+    </div>
+
+   
+    <script>
+        function toggleDescription(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === 'none') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
