@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Services</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: #333;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #00796b, #004d40);
+            color: white;
+            text-align: center;
+            width: 100%;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        header a {
+            text-decoration: none;
+            color: lightblue;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        section h2 {
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #00796b; 
+            color: white; 
+            padding: 10px 20px; 
+            border: none; 
+            cursor: pointer; 
+            margin-bottom: 10px; 
+            border-radius: 4px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #004d40;
+            transform: scale(1.05);
+        }
+
+        .tip {
+            display: none;
+            background: #e8f5e9;
+            padding: 10px;
+            border-left: 5px solid #00796b;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+
+        .nutrition-pyramid {
+            margin-top: 20px;
+        }
+
+        .nutrition-pyramid img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #004d40;
+            color: white;
+            text-align: center;
+            width: 100%;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        function toggleTip(id) {
+            var element = document.getElementById(id);
+            element.style.display = (element.style.display === "block") ? "none" : "block";
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Healthcare Services</h1>
+        <p>Promoting health and wellness for our community.</p>
+        <a href="index.html">Back to Main Website</a>
+    </header>
+
+    <!-- Heat Stroke Prevention -->
+    <section>
+        <h2>Tips to Prevent Heat Stroke</h2>
+        <button onclick="toggleTip('heatTip1')">Stay Hydrated</button>
+        <div id="heatTip1" class="tip">
+            <p>Drink plenty of water throughout the day. Avoid sugary, caffeinated, and alcoholic beverages as they can dehydrate you.</p>
+        </div>
+        <button onclick="toggleTip('heatTip2')">Avoid Direct Sunlight</button>
+        <div id="heatTip2" class="tip">
+            <p>Stay indoors during the hottest parts of the day (10 AM - 4 PM). If you must go outside, wear a hat and lightweight, light-colored clothing.</p>
+        </div>
+        <button onclick="toggleTip('heatTip3')">Know the Signs</button>
+        <div id="heatTip3" class="tip">
+            <p>Recognize early symptoms of heat exhaustion, such as dizziness, fatigue, and excessive sweating, and take action immediately.</p>
+        </div>
+    </section>
+
+    <!-- Nutritional Diet -->
+    <section>
+        <h2>Interactive Nutritional Pyramid</h2>
+        <p>Hover over each section of the pyramid to learn more about the food groups!</p>
+        <div class="nutrition-pyramid">
+            <img src="https://via.placeholder.com/400x600" alt="Nutritional Pyramid">
+        </div>
+        <div style="margin-top: 20px;">
+            <button onclick="toggleTip('growGroup')">Grow Foods</button>
+            <div id="growGroup" class="tip">
+                <p>Grow foods like fish, meat, and beans are rich in protein, which is essential for building and repairing tissues.</p>
+            </div>
+            <button onclick="toggleTip('glowGroup')">Glow Foods</button>
+            <div id="glowGroup" class="tip">
+                <p>Glow foods such as fruits and vegetables are packed with vitamins and minerals that keep your body healthy and your skin glowing.</p>
+            </div>
+            <button onclick="toggleTip('goGroup')">Go Foods</button>
+            <div id="goGroup" class="tip">
+                <p>Go foods like rice, bread, and pasta are high in carbohydrates, providing energy for your daily activities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Steven Government Website</p>
+    </footer>
+</body>
+</html>
